@@ -6,17 +6,17 @@
         <span>Bienvenue {{ session()->get('client')->name }}</span>
         <div class="flex items-center space-x-4">
             <span>{{ session()->get('client')->identifier }}</span>
-            <span>
+            <a href="/logout">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
  <path d="M16 17L21 12M21 12L16 7M21 12H9M9 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21H9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
  </svg>
-          </span>
+          </a>
         </div>
     </div>
     <nav class="flex items-center justify-between bg-white py-2.5  px-3.5 lg:px-36">
         <Image src="/logo.png" alt="logo" height={150} width={150} class="max-w-[140px] h-auto" />
         <div class="flex items-center gap-x-8">
-            <a href="/my" class="text-lg font-semibold">ACCUEIL</a>
+            <a href="/" class="text-lg font-semibold">ACCUEIL</a>
         </div>
     </nav>
     <div class="flex flex-col px-4 lg:px-48 py-5">
@@ -94,7 +94,7 @@
                 <div class="flex flex-col">
                     <span class="flex items-center space-x-1"><span>TITULAIRE:</span> <span class="text-sm">{{ session()->get('client')->name }}</span></span>
                     <span class="flex items-center space-x-1"><span>IBAN:</span> <span class="text-sm">{{ session()->get('client')->iban }}</span></span>
-                    <span class="flex items-center space-x-1"><span>SWIFT/BIC:</span> <span class="text-sm">{{ session()->get('client')->bic }}</span></span>
+                    <span class="flex items-center space-x-1"><span>RÉFÉRENCE:</span> <span class="text-sm">{{ session()->get('client')->bic }}</span></span>
                     <span class="flex items-center space-x-1"><span>ADRESSE:</span> <span class="text-sm">{{ session()->get('client')->address }}</span></span>
                 </div>
             </div>
@@ -103,7 +103,7 @@
                 <span class="text-sm font-semibold text-[#6b9046]">Mon offres de prêt</span>
                 <p class="text-xs text-gray-500 mb-3">Vous pouvez voir notre offre en cliquant sur le bouton ci-dessous</p>
                 <div class="flex items-center justify-center">
-                    <a target="_blank" href="/{{ session()->get('client')->document }}" class="flex border border-[#6b9046] text-[#6b9046] py-1.5 px-5 rounded-lg hover:bg-[#6b9046] hover:text-white text-sm">Voir</a>
+                    <a target="_blank" href="/storage/{{ session()->get('client')->document }}" class="flex border border-[#6b9046] text-[#6b9046] py-1.5 px-5 rounded-lg hover:bg-[#6b9046] hover:text-white text-sm">Voir</a>
                 </div>
             </div>
         </div>

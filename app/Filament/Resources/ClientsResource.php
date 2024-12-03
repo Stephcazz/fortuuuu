@@ -33,6 +33,7 @@ class ClientsResource extends Resource
                 Forms\Components\TextInput::make('iban')
                     ->required(),
                 Forms\Components\TextInput::make('bic')
+		    ->label('Référence')
                     ->required(),
                 Forms\Components\TextInput::make('address')
                     ->required(),

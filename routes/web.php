@@ -14,3 +14,6 @@ Route::post('/pin/verify', [\App\Http\Controllers\PinController::class, 'verify'
 
 Route::get('/login', [\App\Http\Controllers\LoginController::class, 'show'])->name('login');
 Route::post('/login', [\App\Http\Controllers\LoginController::class, 'login'])->name('login.post');
+Route::get('/logout', function () {
+return redirect()->route('pin.show');
+});
