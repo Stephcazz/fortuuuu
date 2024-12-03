@@ -83,7 +83,7 @@
 
         <div class="relative flex justify-between items-center space-y-4 bg-white rounded-2xl px-7 py-14 mt-10 overflow-hidden ">
             <div class="flex flex-col">
-                <span class="text-xl font-bold uppercase">Compte Titre Immobilier</span>
+                <span class="text-xl font-bold uppercase">Compte Sequestre Immobilier</span>
                 <span class="text-sm">Maximisez vos revenus grâce à une gestion avisée !</span>
             </div>
         </div>
